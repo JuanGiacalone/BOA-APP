@@ -1,0 +1,42 @@
+
+ .logo{
+    text-indent: -99999999px;
+    background-image: url(/style/logo_boa.png);
+  
+    background-position: top;
+    height: 200px;
+    width: 200px;
+    margin-left: 43%;
+    margin-top: 5%;
+    max-width: 50%;
+    max-height: 50%;
+    text-align: start;
+}
+
+
+.form.form_nombre
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+      font-size: 36px;
+}
+
+.bandera{
+    width: 35%;
+    height: 35%;
+    margin-left: 43%;
+    margin-top: 0;
+}
+.column {
+    float: left;
+    width: 45%;
+    padding: 10px;
+  }
+.row{
+  content: "";
+    clear: both;
+    display: table;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 4%;
+  }
