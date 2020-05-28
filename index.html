@@ -12,19 +12,39 @@
 </head>
 <body>
 
-    <div class="todo">
+    <div class="form_envoltorio">
         
-        <div class="logo">
-        <a href="#home">Logo</a>
-         </div>
+        
+        
+        <div id="logo_izq">
+              <nav>
+              <a href="/"><img src="/style/logo_boa.png"/></a>
+              </nav>
+        </div>
+          
+        
     
-        <div class="forms">
+        <form class="form_derecha">
         
-        <form action="" method="GET" >
-            <div class="form form_nombre">
-                <label for="Nombre" class="Form_nombre_lenguaje">Elige tu Nombre</label><br><br>
-                <input type="text" name="name" id="name">
-                </div>
+             
+            <div id="form_nombre">
+                <a >Ingresá tu nombre...</a> 
+                <label for="Nombre" class="label_nombre"></label>
+                <input class = "input_nombre"type="text" name="nombre" id="nombre" placeholder=" Juan Perez">
+             </div>
+             <div id="form_checks">
+                 <label for = "Edad" class ="label_checks">
+                    <input class="input_check" type="checkbox" name="edad" id="edad">
+                    <span class="check"></span>
+                    <a2>Soy mayor de 18 años.</a2><br><br>
+                 </label>
+                 
+                 <label for="Terms" class="label_checks">
+                    <input class="input_check" type="checkbox" name="terms" id="terms" >
+                    <span class="check"></span>
+                    <a2>Acepto los <a href="terms.html">Terminos y condiciones.</a></a2>
+                </label>
+             </div>
             <div class="row">
                 <div class="column">
                     <input type="image" src="/style/br.png" alt="submit" formaction="portugues.html" class="bandera">
@@ -35,7 +55,8 @@
         
             </div>
             
-        </form>
+            </form>
+        </div>
         
     </div>
 
