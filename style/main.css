@@ -26,7 +26,7 @@ body {
   padding: 5vh 15px;
 }
 
- #logo_izq{
+#logo_izq{
   display: flex;
  
   justify-content: center;
@@ -50,6 +50,14 @@ body {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)
   
 }
+/* PARTE NOMBRE{*/
+#form_nombre
+{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      margin-top: -5%;
+}
 #label_nombre{
   background-color: white;
   display: flex;
@@ -72,10 +80,7 @@ body {
   border-radius: 6px;
   color: black;
   border: 1px solid #CDD9ED;
-  transition: border .3s ease;
-
-    
-  
+  transition: border .3s ease;   
 }
 .input_nombre::placeholder{
 
@@ -86,14 +91,9 @@ body {
 {
 outline: none;}
 
+/* } PARTE NOMBRE*/
 
-#form_nombre
-{
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-      font-size: 22px;
-      margin-top: -10%;
-}
+/* CHECKS{*/
 .label_checks
 {
   display: block;
@@ -107,6 +107,7 @@ outline: none;}
   -ms-user-select: none;
   user-select: none;
 }
+    /*borra el checkbox default*/
 .label_checks input{
   position: absolute;
   opacity: 0;
@@ -133,6 +134,7 @@ outline: none;}
   content: "";
   position: absolute;
   display: none;
+  
 }
 .label_checks input:checked ~ .check:after {
   display: block;
@@ -148,8 +150,9 @@ outline: none;}
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+  
 }
-
+/* } CHECKS*/
 
 a {
   /* remove default underline */
@@ -161,7 +164,7 @@ a:hover {
   color: grey;
 }
 
-
+/* BANDERAS {*/
 .bandera{
     width: 100%;
     height: 100%;
@@ -178,7 +181,7 @@ a:hover {
     width: 45%;
     padding: 10px;
   }
-.row{
+.row_banderas{
   content: "";
     clear: both;
     display: table;
@@ -186,6 +189,37 @@ a:hover {
     margin-left: 10%;
     margin-top: -20%;
   }
+  /* } BANDERAS*/
+
+/*FOOTER { */
+
+footer{
+    position: fixed;
+    bottom: 0;
+}  
+
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+.footer_index{
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+  display: inline-block;
+  vertical-align: top;
+}
+.contenedor_footer_izq img
+{
+  width: 30%;
+}
+
 
 
   @media screen and (max-width:768px) {

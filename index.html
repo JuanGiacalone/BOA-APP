@@ -14,8 +14,6 @@
 
     <div class="form_envoltorio">
         
-        
-        
         <div id="logo_izq">
               <nav>
               <a href="/"><img src="/style/logo_boa.png"/></a>
@@ -28,30 +26,38 @@
         
              
             <div id="form_nombre">
-                <a >Ingresá tu nombre...</a> 
-                <label for="Nombre" class="label_nombre"></label>
-                <input class = "input_nombre"type="text" name="nombre" id="nombre" placeholder=" Juan Perez">
-             </div>
-             <div id="form_checks">
-                 <label for = "Edad" class ="label_checks">
-                    <input class="input_check" type="checkbox" name="edad" id="edad">
+                <label for="Ingresa tu Nombre" class="label_nombre">
+                    <a >Ingresá tu nombre...</a> 
+                    <input class = "input_nombre"type="text" name="nombre" id="nombre" placeholder=" Juan Perez">
+                </label>
+            </div>
+
+            <div class="form_checks">
+
+                 <label for = "edad_mas18" class ="label_checks">
+                    <input class="input_check" type="checkbox" name="edad" id="edad_mas18">
                     <span class="check"></span>
                     <a2>Soy mayor de 18 años.</a2><br><br>
                  </label>
-                 
-                 <label for="Terms" class="label_checks">
-                    <input class="input_check" type="checkbox" name="terms" id="terms" >
+                
+                 <label for="terminos_y_condiciones" class="label_checks">
+                    <input class="input_check" type="checkbox" name="terms" id="terminos_y_condiciones" >
                     <span class="check"></span>
-                    <a2>Acepto los <a href="terms.html">Terminos y condiciones.</a></a2>
+                    <a2>Acepto los <a href="terms.html">términos y condiciones.</a></a2>
+                    </label>
+                
+            </div>
+            <div class="row_banderas">
+                <label for="opcion_portugues" class="label_banderas">
+                    <div class="column">
+                        <input type="image" src="/style/br.png" alt="submit" formaction="portugues.html" class="bandera" id="opcion_portugues">
+                    </div>
                 </label>
-             </div>
-            <div class="row">
-                <div class="column">
-                    <input type="image" src="/style/br.png" alt="submit" formaction="portugues.html" class="bandera">
-                </div>
-                <div class="column">
-                    <input type="image" src="/style/eng.png" alt="submit" formaction="ingles.html" class="bandera">
-                </div>
+                <label for="opcion_ingles" class="label_banderas">
+                    <div class="column">
+                        <input type="image" src="/style/eng.png" alt="submit" formaction="ingles.html" class="bandera" id="opcion_ingles">
+                    </div>
+                </label>
         
             </div>
             
@@ -60,9 +66,24 @@
         
     </div>
 
- 
-
-
-
 </body>
+<footer class="footer_index">
+    <div class="contenedor_footer_izq">
+
+        <a href="/"><img src="/style/logo_boa.png"/></a>
+        
+        <p class="footer_links">
+
+            <a3 href = "about.html " >Sobre el sitio...</a3>
+
+            <a3 href = "contact.html">Contacto</a3>
+
+            <a3 href = "terms.html">Términos y condiciones</a3>
+        </p>
+
+        <p class="creditos">Creada por Juan P. Giacalone</p>
+    </div>
+
+</footer>
+
 </html>
