@@ -35,20 +35,29 @@ body {
 #logo_izq img{
   width: 200px;
   height: 200px;
-  transform: scale(1.50);
+  transform: scale(1.25);
+}
+#logo_izq p
+{
+  font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      margin-top: 25px;
+      font-style: italic;
+      
 }
 
 .form_derecha{
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 20%;
-  padding: 5% 5%;
+  margin-top: 10%;
+  padding: 10% 10%;
   border-color: grey;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)
-  
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  margin-bottom:10px;
+  height: 500px;
 }
 /* PARTE NOMBRE{*/
 #form_nombre
@@ -154,8 +163,8 @@ outline: none;}
 }
 /* } CHECKS*/
 
-a {
-  /* remove default underline */
+/*a {
+  /* remove default underline *
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -163,6 +172,7 @@ a {
 a:hover {
   color: grey;
 }
+*/
 
 /* BANDERAS {*/
 .bandera{
@@ -176,7 +186,7 @@ a:hover {
   transform: scale(1.25);
   transition: transform .25s ease
 }
-.column {
+.column_banderas {
     float: left;
     width: 45%;
     padding: 10px;
@@ -187,7 +197,7 @@ a:hover {
     display: table;
   
     margin-left: 10%;
-    margin-top: -20%;
+    margin-top: -15%;
   }
   /* } BANDERAS*/
 
@@ -196,13 +206,7 @@ a:hover {
 footer{
     position: fixed;
     bottom: 0;
-}  
-
-
-@media (max-height:800px){
-	footer { position: static; }
-	header { padding-top:40px; }
-}
+} 
 
 .footer_index{
   box-sizing: border-box;
@@ -214,14 +218,28 @@ footer{
   margin-top: 80px;
   display: inline-block;
   vertical-align: top;
+  background-image: linear-gradient(white,red);
 }
 .contenedor_footer_izq img
 {
-  width: 30%;
+  width: min-content;
+}
+.creditos
+{
+  font-style: italic;
+
+}
+.footer_links a
+{
+  text-decoration: none;
 }
 
 
-
+@media (max-height:800px){
+	footer { position:fixed; }
+  header { padding-top:40px; }
+  body { position: center;}
+}
   @media screen and (max-width:768px) {
 
     /* make the layout  a single column and add some margin to the wrapper */
@@ -236,8 +254,6 @@ footer{
     }
 }
 
-
-  
 
 html {
   box-sizing: border-box;
