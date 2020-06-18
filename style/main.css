@@ -3,13 +3,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   /* altura maxima para body*/
   height: 100vh;
   /* fuente elegida */
-  font-family: 'Roboto',
-  sans-serif;
+  
   /* fondito */
   background: white;
   display:flex;
@@ -63,7 +63,7 @@ body {
 #form_nombre
 {
     text-align: left;
-    font-family: 'Roboto', sans-serif;
+    
       font-size: 22px;
       margin-top: -5%;
 }

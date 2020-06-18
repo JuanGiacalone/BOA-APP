@@ -1,0 +1,8 @@
+{
+  "name": "socket-chat-boa-app",
+  "version": "0.0.1",
+  "description": "basic chatting",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
