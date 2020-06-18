@@ -1,5 +1,5 @@
 $(function () {
-    var socket = io();
+    var socket = io.connect('http://localhost:5500');
     $('form').submit(function(e){
       e.preventDefault(); // prevents page reloading
       socket.emit('chat message', $('#m').val());

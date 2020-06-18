@@ -1,6 +1,15 @@
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+var express = require('express'),
+    http = require('http');
+var app = express();
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
+
+
+
+io.sockets.on('connection', function () {
+  console.log('hello world im a hot socket');
+});
+
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/msg_app.html');
@@ -11,6 +20,6 @@ app.get('/', (req, res) => {
     });
   });
 
-http.listen(5500, () => {
+server.listen(5500, () => {
   console.log('listening on *:5500');
 });
