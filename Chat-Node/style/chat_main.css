@@ -5,8 +5,17 @@
 body { 
     font: 13px Helvetica, Arial;
      }
+
+.container
+{
+    display: flex;
+    width: 100vw;
+}
+/*msg - container*/
+
 form { 
-    background: #000; 
+    border: 1px grey;
+    border-radius: 2em; 
     padding: 3px; 
     position: fixed; 
     bottom: 0; 
@@ -15,12 +24,14 @@ form {
 form input { 
     border: 0; 
     padding: 10px; 
-    width: 90%; 
+
     margin-right: 0.5%; }
 
-form button { 
-    width: 9%; 
-    background: rgb(130, 224, 255); 
+form button {
+    border-radius: 2em;
+    width: 9%;
+    text-emphasis: bold; 
+    background:red;
     border: none; 
     padding: 10px; }
 
@@ -34,3 +45,4 @@ form button {
     
 #messages li:nth-child(odd) { 
     background: #eee; }
+/* msg - container */
