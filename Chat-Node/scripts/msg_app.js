@@ -1,5 +1,5 @@
 $(function () {
-    var url = '192.168.1.107:5500';
+    var url = 'localhost:5500';
     var socket = io.connect(url, { transports: ['websocket']});
     $('form').submit(function(e){
       e.preventDefault(); // prevents page reloading

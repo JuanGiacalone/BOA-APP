@@ -6,23 +6,44 @@
     <title>BOA ChatAPPs</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <base href="/">
-    <link rel='stylesheet' type='text/css' media='screen' href='/Chat-Node/style/chat_main.css'>
+    
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/Chat-Node/style/chat_main.css'>
     <link rel="shortcut icon" href="/style/favicon.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src='/Chat-Node/scripts/msg_app.js'></script>
-    <script src="Chat-Node\node_modules\socket.io-client\dist\socket.io.js"></script>
+    <script src="/Chat-Node/scripts/msg_app.js"></script>
+    <script src="/Chat-Node/node_modules/socket.io-client/dist/socket.io.js"></script>
 
   </head>
-      
+      <nav>
+
+      </nav>
   <body>
     <div class="container">
+
+      <div class="columna-izquierda">
+        
+      </div>
+      <div class="columna-derecha">
+
         <div class="msg-container">
+          <div class="msg-head">
+            
+          </div>
+          <div class="msg-body">
             <ul id="messages"></ul>
+          </div>
+
+          <div class="msg-footer">
             <form action="">
-                <input id="m" autocomplete="off" /><button>Enviar</button>
-            </form>
+            <input id="m" autocomplete="off"><button id="boton_Audio"></button><button>Enviar</button>
+           
+              </form>
+          </div>
+          
         </div>
+      </div>
+      
         
     </div>
   </body>

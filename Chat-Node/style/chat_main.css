@@ -1,39 +1,84 @@
 * { margin: 0; 
     padding: 0; 
     box-sizing: border-box;
+    background-color: whitesmoke;
  }
 body { 
     font: 13px Helvetica, Arial;
      }
-
+nav
+{
+    height: 10vh;
+}
 .container
 {
     display: flex;
+    flex-direction: row;
     width: 100vw;
+    height: 100vh;
 }
+.columna-izquierda
+{
+    flex: 1;
+}
+.columna-derecha
+{
+    flex: 4;
+}
+
+
 /*msg - container*/
+.msg-container
+{
+    height: auto;
+    background-color: white;
+    
+    
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0.5em;
+    box-shadow: var(--subtle-shadow);
+}
+
+.msg-body
+{
+    height: 60vh;
+}
 
 form { 
-    border: 1px grey;
+    
     border-radius: 2em; 
     padding: 3px; 
-    position: fixed; 
+    
     bottom: 0; 
     width: 100%; }
 
 form input { 
-    border: 0; 
-    padding: 10px; 
-
+    border: 1px grey; 
+    padding: 10px;
+    width: 60vw; 
+    border-radius: 2em;
     margin-right: 0.5%; }
 
 form button {
-    border-radius: 2em;
-    width: 9%;
-    text-emphasis: bold; 
+    border-radius: 1em;
+    width: 10%;
+    text-emphasis: bold;
+    position: relative; 
     background:red;
     border: none; 
     padding: 10px; }
+
+#boton_Audio
+{
+    background: white;
+    background-position: center;
+    height: 2.3em;
+    width: 2.9em;
+    background-size: 3em;
+    background-image: url("botonAudio.ico");
+    
+}
 
 #messages { 
      list-style-type: none; 
