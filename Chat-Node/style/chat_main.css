@@ -1,3 +1,6 @@
+:root {
+    --lil-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
 * { margin: 0; 
     padding: 0; 
     box-sizing: border-box;
@@ -39,6 +42,12 @@ nav
     border-radius: 0.5em;
     box-shadow: var(--subtle-shadow);
 }
+button
+{
+    text-decoration: none;
+    color: none;
+    border-width: 0em;
+}
 
 .msg-body
 {
@@ -54,30 +63,28 @@ form {
     width: 100%; }
 
 form input { 
-    border: 1px grey; 
+    border: 1px grey;
+    box-shadow: var(--lil-shadow);
+    background-color: white; 
     padding: 10px;
     width: 60vw; 
     border-radius: 2em;
     margin-right: 0.5%; }
 
-form button {
-    border-radius: 1em;
-    width: 10%;
-    text-emphasis: bold;
-    position: relative; 
-    background:red;
-    border: none; 
-    padding: 10px; }
 
-#boton_Audio
+   
+.msg-footer
 {
-    background: white;
-    background-position: center;
-    height: 2.3em;
-    width: 2.9em;
-    background-size: 3em;
-    background-image: url("botonAudio.ico");
-    
+    margin-bottom: 0em;
+    height: 8vh;
+}
+.botones_chat
+{
+    width: 12vw;
+    height: 3vw;
+    position: relative;
+    float: right;
+    margin-bottom: 2em;
 }
 
 #messages { 

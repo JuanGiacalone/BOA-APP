@@ -9,10 +9,9 @@
     
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' media='screen' href='/Chat-Node/style/chat_main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/style/favicon.ico" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/Chat-Node/scripts/msg_app.js"></script>
-    <script src="/Chat-Node/node_modules/socket.io-client/dist/socket.io.js"></script>
+    
 
   </head>
       <nav>
@@ -36,9 +35,19 @@
 
           <div class="msg-footer">
             <form action="">
-            <input id="m" autocomplete="off"><button id="boton_Audio"></button><button>Enviar</button>
-           
+
+            <input id="m" autocomplete="off">
+
+            <div class="botones_chat">
+
+              <i class="fa fa-microphone" style="font-size: 36px; color:red;"></i>
+
+              <label for="send enviar"><button><i class="fa fa-paper-plane fa-3x" aria-hidden="true"></i></button></label>
+
+            </div>
+
               </form>
+
           </div>
           
         </div>
@@ -47,6 +56,9 @@
         
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/Chat-Node/scripts/msg_app.js"></script>
+    <script src="/Chat-Node/node_modules/socket.io-client/dist/socket.io.js"></script>
   <footer>
       
   </footer>
