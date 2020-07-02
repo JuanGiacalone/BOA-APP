@@ -33,32 +33,58 @@ nav
 /*msg - container*/
 .msg-container
 {
-    height: auto;
+    height: 78vh;
     background-color: white;
     
     
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
     border-radius: 0.5em;
     box-shadow: var(--subtle-shadow);
 }
-button
+/* head del chat */
+.msg-head
 {
-    text-decoration: none;
-    color: none;
-    border-width: 0em;
+    height: 3em;
 }
+/* body del chat*/
+#messages { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; }
+
+#messages li { 
+   padding: 5px 10px; }
+   
+#messages li:nth-child(odd) { 
+   background: #eee; }
 
 .msg-body
 {
     height: 60vh;
 }
+.msg-body-chats
+{
+    width: 76vw;
+    height: 59vh;
+    padding: 1em;
+    background-color: white;
+    margin-left: 2em;
+    margin-right: 2.5em;
+    scroll-behavior: smooth;
+    border-radius: 2em;
+    box-shadow: var(--lil-shadow);
+    
+}
+/* body del chat*/
 
+
+
+/* footer del chat*/ 
 form { 
     
     border-radius: 2em; 
-    padding: 3px; 
-    
+    padding: 4px; 
     bottom: 0; 
     width: 100%; }
 
@@ -66,35 +92,220 @@ form input {
     border: 1px grey;
     box-shadow: var(--lil-shadow);
     background-color: white; 
-    padding: 10px;
-    width: 60vw; 
+    padding: 16px;
+    width: 67vw; 
     border-radius: 2em;
-    margin-right: 0.5%; }
-
-
-   
+    margin-right: 0.5%;
+    font-size: 15px;
+    font-family: Helvetica, Arial;
+    font-weight: bold; 
+}
+span
+{
+    display: block;
+    overflow: hidden;
+    padding: 1em;
+}
 .msg-footer
 {
-    margin-bottom: 0em;
-    height: 8vh;
+    
+ 
+    height: 11vh;
+   
+}
+button
+{
+    text-decoration: none;
+    color: none;
+    border-width: 0em;
+    margin-left: 2em;
+
+}
+button:hover
+{
+    transform: scale(1.25);
+    transition: transform .35s ease
+}
+button:focus,form input:focus
+{
+    outline: none;
+}
+.msg-footer-input
+{
+    margin-top: 2em;
+    width: fit-content;
+    margin-left: 2em;
+    margin-right: 0em;
+    height: 5em;
 }
 .botones_chat
 {
+    margin-left: 0.5em;
     width: 12vw;
     height: 3vw;
-    position: relative;
+    transform: scale(1.14);
     float: right;
-    margin-bottom: 2em;
+    margin-top: -3.5em;
+    margin-right: 2.9em;
+    
+    width: fit-content;
+
 }
 
-#messages { 
-     list-style-type: none; 
-     margin: 0; 
-     padding: 0; }
+/* footer del chat*/ 
 
-#messages li { 
-    padding: 5px 10px; }
+
+
+/* RESPONSIVEness */
+@media screen and (max-width: 1700px) {
+    form input
+    {
+        width: 60vw
+        
+    }
+    .botones_chat
+    {
+        width: 10vw;
+    }
+    .msg-footer-input
+    {
+    margin-top: 2em;
+    width: fit-content;
+    margin-left: 2em;
+    margin-right: 0em;
+    }
+}
+@media screen and (max-width: 1210px) {
     
-#messages li:nth-child(odd) { 
-    background: #eee; }
-/* msg - container */
+    .columna-derecha
+    {
+        align-self: center;
+    }
+    .msg-container
+    {
+        width: 83vw;
+    }
+    .container
+    {
+        flex-direction:column-reverse ;
+    }
+    button
+    {
+        margin-left: 0;
+        margin-right: 1em;
+        width: fit-content;
+    }
+    .botones_chat
+    {
+        width: 10vw;
+        transform: scale(1);
+        margin-left: 1em;
+        margin-right: 2em;
+    }
+    .msg-footer-input
+    {
+    margin-top: 2em;
+    width: fit-content;
+    margin-left: 2em;
+    margin-right: 0em;
+    }
+}
+
+@media screen and (max-width: 940px) {
+
+    .columna-derecha
+    {
+        align-self: center;
+        width: 100vw;
+
+    }
+    .msg-container
+    {
+        width: 100vw;
+    }
+    .msg-body-chats
+    {
+        width: 91vw;
+    }
+    .botones_chat
+    {
+        width: max-content;
+    }
+    .msg-footer-input
+    {
+    margin-top: 2em;
+    width: fit-content;
+    margin-left: 2em;
+    margin-right: 0em;
+    }
+    form input
+    {
+        width: 76vw;
+    }
+}
+@media screen and (max-width: 830px) {
+
+    
+    form input
+    {
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 660px) {
+
+    
+    form input
+    {
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    
+    form input
+    {
+        width: 60vw;
+    }
+}
+@media screen and (max-width: 450px) {
+
+    .msg-body-chats
+    {
+        width: 80vw;
+    }
+    form
+    {
+        height: 20vh;
+    }
+    form input
+    {
+        width: 55vw;
+    }
+    .msg-footer-input
+    {
+        margin-left: 0;
+    }
+    .msg-footer
+    {
+        height: 8vh;
+    }
+    .columna-derecha
+    {
+        display: inline-block;
+    }
+    .columna-izquierda
+    {
+        display: inline-block;
+        margin-top: 5em;
+        display: block;
+        box-sizing: content-box;
+    }
+
+}
+
+
+   
+   
+
+/* RESPONSIVEness */
