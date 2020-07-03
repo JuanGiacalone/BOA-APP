@@ -1,18 +1,63 @@
 :root {
     --lil-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
-* { margin: 0; 
-    padding: 0; 
+* { margin: 0px; 
+    padding: 0px; 
     box-sizing: border-box;
     background-color: whitesmoke;
  }
 body { 
     font: 13px Helvetica, Arial;
      }
+/* nav */
 nav
 {
-    height: 10vh;
+    height: 12vh;
 }
+.navbar {
+    background-color: 	#DC143C; 
+    position: fixed;
+    
+    height: 13.3vh; 
+    top: 0; 
+    width: 100%; 
+    transition: top 0.3s; 
+  }
+  
+.navbar a {
+    
+    display: inline-block;
+    color: black;
+    
+    padding: 15px;
+    text-decoration: none;
+
+    font: 18px Helvetica, Arial;
+    margin: 0.5em;
+   
+  }
+  
+.navbar a:hover {
+    background-color: red;
+    color: black;
+  }
+.navbar img
+{
+    float: left;
+    height: 120px;
+    width: 120px;
+    padding: 0.5em;
+    margin-top: 0em;
+    margin-left: 0em;
+    background-color: #DC143C;
+}
+.navbar-buttons
+{
+    
+}
+
+
+/* nav */
 .container
 {
     display: flex;
@@ -22,13 +67,14 @@ nav
 }
 .columna-izquierda
 {
-    flex: 1;
-}
-.columna-derecha
-{
-    flex: 4;
+    flex: 1.5;
 }
 
+/*Columna derecha - chat*/
+.columna-derecha
+{
+    flex: 3.5;
+}
 
 /*msg - container*/
 .msg-container
@@ -40,7 +86,7 @@ nav
     padding: 15px;
     margin-top: 20px;
     border-radius: 0.5em;
-    box-shadow: var(--subtle-shadow);
+    box-shadow: var(--lil-shadow);
 }
 /* head del chat */
 .msg-head
@@ -77,9 +123,6 @@ nav
     
 }
 /* body del chat*/
-
-
-
 /* footer del chat*/ 
 form { 
     
@@ -108,10 +151,7 @@ span
 }
 .msg-footer
 {
-    
- 
-    height: 11vh;
-   
+    height: 11vh;  
 }
 button
 {
@@ -119,6 +159,7 @@ button
     color: none;
     border-width: 0em;
     margin-left: 2em;
+    background-color: white;
 
 }
 button:hover
@@ -141,18 +182,122 @@ button:focus,form input:focus
 .botones_chat
 {
     margin-left: 0.5em;
-    width: 12vw;
+    width: auto;
     height: 3vw;
     transform: scale(1.14);
     float: right;
-    margin-top: -3.5em;
+    margin-top: -3.9em;
     margin-right: 2.9em;
     
     width: fit-content;
 
 }
-
 /* footer del chat*/ 
+/*Columna derecha - chat*/
+
+/***************************/
+/*Columna izquierda - cards*/
+/*card*/
+.mi-card{
+    background-color: white;
+    padding: 20px;
+    margin-top: 3em;
+    margin-right: 1.5em;
+    margin-left: 1em;
+    border-radius: 0.5em;
+    box-shadow: var(--lil-shadow);
+    height: 15vh;
+}
+.mi-card > h5
+{
+    background-color: white;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+/*card*/
+/*Diccionario card*/
+.diccionario
+{
+    height: 45vh;
+    text-align: center;
+}
+.diccionario iframe
+{
+    height: 37vh;
+    width: 21vw;
+    overflow: hidden;
+
+    z-index: 2;
+}
+.diccionario img{
+
+    background-color: white;
+    margin-bottom: -1em;
+    float: left;
+}
+.diccionario img:hover
+{
+    transform: scale(1.01);
+    transition: transform .35s ease
+}
+.diccionario label
+{
+    background-color: white;
+}
+.diccionario a
+{
+    width: 0px;
+    height: 0px;
+    background-color: white;
+}
+/*Diccionario card*/
+/* Login card*/
+.login .fa {
+    padding: 10px;
+    font-size: 30px;
+    
+    width: fit-content;
+    margin-left: 0.5em;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .login .fa:hover {
+      
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    padding: 15px;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-google
+  {
+    background: red;
+    color: white;
+  }
+  .fa-linkedin
+  {
+    background: #007bb5;
+    color: white;
+  }
+
+ 
+/* Login card*/
+
+
+/*Columna izquierda - cards*/
 
 
 
@@ -169,7 +314,7 @@ button:focus,form input:focus
     }
     .msg-footer-input
     {
-    margin-top: 2em;
+    margin-top: 0em;
     width: fit-content;
     margin-left: 2em;
     margin-right: 0em;
@@ -209,6 +354,17 @@ button:focus,form input:focus
     margin-left: 2em;
     margin-right: 0em;
     }
+    .diccionario iframe
+    {
+    height: 37vh;
+    width: 80vw;
+    overflow: hidden;
+    z-index: 2;
+    }
+    .login
+    {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 940px) {
@@ -237,6 +393,7 @@ button:focus,form input:focus
     width: fit-content;
     margin-left: 2em;
     margin-right: 0em;
+    
     }
     form input
     {
@@ -245,7 +402,7 @@ button:focus,form input:focus
 }
 @media screen and (max-width: 830px) {
 
-    
+   
     form input
     {
         width: 70vw;
@@ -253,6 +410,10 @@ button:focus,form input:focus
 }
 @media screen and (max-width: 660px) {
 
+    .msg-body-chats
+    {
+        width: 88vw;
+    }
     
     form input
     {
@@ -260,15 +421,18 @@ button:focus,form input:focus
     }
 }
 
-@media screen and (max-width: 550px) {
-
+@media screen and (max-width: 570px) {
+    .msg-body-chats
+    {
+        width: 85vw;
+    }
     
     form input
     {
         width: 60vw;
     }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
 
     .msg-body-chats
     {
