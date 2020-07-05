@@ -1,24 +1,35 @@
 :root {
     --lil-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    --lil-shadow2: 5px 5px 5px 1px rgba(0, 0, 0, 0.15);
 }
 * { margin: 0px; 
     padding: 0px; 
     box-sizing: border-box;
     background-color: whitesmoke;
  }
+body, html{
+    margin:0px;
+    padding:0px;
+    max-width: 100%;
+   
+}
 body { 
     font: 13px Helvetica, Arial;
+    min-width:  fit-content
      }
+     
 /* nav */
 nav
 {
-    height: 12vh;
+    height: 14vh;
+    box-shadow: var(--lil-shadow2);
+    margin-bottom: 1em;
 }
 .navbar {
-    background-color: 	#DC143C; 
-    position: fixed;
-    
-    height: 13.3vh; 
+    background-color: #DC143C;
+    /*	#DC143C*/
+
+    height: 14vh; 
     top: 0; 
     width: 100%; 
     transition: top 0.3s; 
@@ -28,32 +39,46 @@ nav
     
     display: inline-block;
     color: black;
-    
+    background-color: #DC143C;
+    margin-top: 0.7em;
+    margin-left: 1em;
+    border-radius: 0.2em;
     padding: 15px;
     text-decoration: none;
-
-    font: 18px Helvetica, Arial;
-    margin: 0.5em;
+    font-weight: lighter;
+    text-rendering: optimizeLegibility;
+    box-shadow: var(--lil-shadow);
+    font: 18px Arial, Helvetica, sans-serif;
+    
    
   }
   
 .navbar a:hover {
-    background-color: red;
+    transform: scale(1.20);
+    transition: transform .35s ease;
     color: black;
+    
   }
 .navbar img
 {
     float: left;
-    height: 120px;
-    width: 120px;
-    padding: 0.5em;
+    height: 130px;
+    width: 130px;
+    padding: 0.9em;
     margin-top: 0em;
-    margin-left: 0em;
+    margin-left: -0.5em;
+    
     background-color: #DC143C;
 }
+
 .navbar-buttons
 {
-    
+   
+    margin-left: 130px;
+    height: 8vh;
+    border-radius: 0em  0em  0em 0.4em ;
+    margin-bottom: 0.1em;
+    background-color: whitesmoke;
 }
 
 
@@ -61,19 +86,24 @@ nav
 .container
 {
     display: flex;
+    
     flex-direction: row;
     width: 100vw;
     height: 100vh;
+   
 }
+
 .columna-izquierda
 {
     flex: 1.5;
+    
 }
 
 /*Columna derecha - chat*/
 .columna-derecha
 {
     flex: 3.5;
+    width: 68vw;
 }
 
 /*msg - container*/
@@ -111,7 +141,7 @@ nav
 }
 .msg-body-chats
 {
-    width: 76vw;
+    width: 95%;
     height: 59vh;
     padding: 1em;
     background-color: white;
@@ -136,7 +166,7 @@ form input {
     box-shadow: var(--lil-shadow);
     background-color: white; 
     padding: 16px;
-    width: 67vw; 
+    width: calc(100vw * 0.52); 
     border-radius: 2em;
     margin-right: 0.5%;
     font-size: 15px;
@@ -305,7 +335,7 @@ button:focus,form input:focus
 @media screen and (max-width: 1700px) {
     form input
     {
-        width: 60vw
+     /*width: 60vw*/
         
     }
     .botones_chat
