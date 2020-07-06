@@ -62,28 +62,30 @@
           </div>
           <div class="msg-body">
             <div class="msg-body-chats">
-              <ul id="messages"></ul>
+              <ul class="messages">
+                
+              </ul>
             </div>
             
           </div>
 
           <div class="msg-footer">
-            <form action="">
+            <form action="" onsubmit="sendMsg()">
               <div class="msg-footer-input">
 
                 <span><input id="m" autocomplete="off"></span>
 
               </div>
            
-            <div class="botones_chat">
+              <div class="botones_chat">
 
               <label for="send enviar audio"><button title= "Grabar Audio"> <i class="fa fa-microphone" style="font-size: 36px; color:red;"></i></button></label>
 
-              <label for="send enviar"> <button title= "Enviar mensaje"> <i class="fa fa-paper-plane fa-3x" aria-hidden="true"> </i></button></label>
+              <label for="send enviar"> <button title= "Enviar mensaje" type="submit" id="sendButton" > <i class="fa fa-paper-plane fa-3x" aria-hidden="true"> </i></button></label>
 
             </div>
 
-              </form>
+            </form>
 
           </div>
           
@@ -93,9 +95,9 @@
         
     </div>
   </body>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/Chat-Node/scripts/msg_app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/Chat-Node/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="/Chat-Node/scripts/msg_app.js"></script>
   <footer>
       
   </footer>

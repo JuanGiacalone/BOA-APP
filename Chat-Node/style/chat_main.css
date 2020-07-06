@@ -11,6 +11,7 @@ body, html{
     margin:0px;
     padding:0px;
     max-width: 100%;
+    -webkit-font-smoothing: antialiased;
    
 }
 body { 
@@ -83,6 +84,8 @@ nav
 
 
 /* nav */
+
+/* container*/
 .container
 {
     display: flex;
@@ -123,18 +126,41 @@ nav
 {
     height: 3em;
 }
-/* body del chat*/
-#messages { 
-    list-style-type: none; 
+/*ul mensajes*/
+ul {
+    list-style: none;
+    word-wrap: break-word;
+  }
+.messages { 
     margin: 0; 
-    padding: 0; }
-
-#messages li { 
-   padding: 5px 10px; }
+    padding: 10px;
+    border-radius: 1em;
    
-#messages li:nth-child(odd) { 
-   background: #eee; }
+ }
 
+.messages li { 
+   padding: 5px 5px;
+   background-color: white;
+ }
+ .message{
+    border-radius: 1em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    width: 50vw;
+    box-shadow: var(--lil-shadow);
+ }
+ .message span
+ {
+     border-radius: 0em 1em 0em 0em ;
+     background-color: white;
+ }
+ .username {
+    font-weight: 700;
+    overflow: hidden;
+    padding-right: 15px;
+    text-align: right;
+  }
+ /* body del chat*/
 .msg-body
 {
     height: 60vh;
@@ -143,13 +169,14 @@ nav
 {
     width: 95%;
     height: 59vh;
-    padding: 1em;
+    padding: 8px;
     background-color: white;
     margin-left: 2em;
     margin-right: 2.5em;
     scroll-behavior: smooth;
     border-radius: 2em;
     box-shadow: var(--lil-shadow);
+    overflow-y: auto;
     
 }
 /* body del chat*/
@@ -333,11 +360,7 @@ button:focus,form input:focus
 
 /* RESPONSIVEness */
 @media screen and (max-width: 1700px) {
-    form input
-    {
-     /*width: 60vw*/
-        
-    }
+   
     .botones_chat
     {
         width: 10vw;
