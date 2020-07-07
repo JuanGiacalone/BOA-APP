@@ -107,6 +107,7 @@ nav
 {
     flex: 3.5;
     width: 68vw;
+    margin-left: 3em;
 }
 
 /*msg - container*/
@@ -114,7 +115,7 @@ nav
 {
     height: 78vh;
     background-color: white;
-    
+    width: 55vw;
     
     padding: 15px;
     margin-top: 20px;
@@ -134,19 +135,19 @@ ul {
 .messages { 
     margin: 0; 
     padding: 10px;
-    border-radius: 1em;
-   
+    border-radius: 1.8em;
+   min-height: 57vh;
  }
 
 .messages li { 
-   padding: 5px 5px;
+   padding: 3px 3px;
    background-color: white;
  }
  .message{
     border-radius: 1em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-    width: 50vw;
+    width: fit-content;
     box-shadow: var(--lil-shadow);
  }
  .message span
@@ -155,10 +156,16 @@ ul {
      background-color: white;
  }
  .username {
-    font-weight: 700;
+    font-weight: bold;
     overflow: hidden;
     padding-right: 15px;
-    text-align: right;
+    padding-bottom: 5px;
+    text-align: left;
+    height: fit-content;
+    width: fit-content;
+  }
+  .messageBody{
+    width: fit-content;
   }
  /* body del chat*/
 .msg-body
@@ -193,7 +200,8 @@ form input {
     box-shadow: var(--lil-shadow);
     background-color: white; 
     padding: 16px;
-    width: calc(100vw * 0.52); 
+    /*width: calc(100vw * 0.42);*/
+    width: 42vw; 
     border-radius: 2em;
     margin-right: 0.5%;
     font-size: 15px;
@@ -230,7 +238,7 @@ button:focus,form input:focus
 }
 .msg-footer-input
 {
-    margin-top: 2em;
+    margin-top: 1.5em;
     width: fit-content;
     margin-left: 2em;
     margin-right: 0em;
@@ -356,36 +364,122 @@ button:focus,form input:focus
 
 /*Columna izquierda - cards*/
 
+/*footer*/
+
+.footer{
+    display: none;
+}
+.liston-boa{
+    display: none;
+}
+
 
 
 /* RESPONSIVEness */
 @media screen and (max-width: 1700px) {
-   
+  
+   form input{
+
+    width: 40vw;
+
+   }
+}
+@media screen and (max-width: 1590px) {
+  
+    form input{
+ 
+     width: 38vw;
+ 
+    }
+ }
+ @media screen and (max-width: 1390px) {
+  
+    form input{
+ 
+     width: 36vw;
+ 
+    }
+ }
+
+@media screen and (max-width: 1155px) {
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow-y: scroll;
+      overflow: hidden;
+        padding-bottom: 100px;
+        display: inline-block;
+    }
+    .footer
+    {
+        display:block;
+        width: 100vw;
+        margin-top: 1em;
+    }
+    .liston-boa{
+        display: block;
+        width: 100vw;
+        height: 70px;
+        background-color: #DC143C;
+        text-align: center;
+    }
+    .liston-boa img
+    {
+        padding: 3px;
+        align-self: center;
+        width: 50px;
+        height: 50px;
+        background-color: #DC143C;
+    }
+
+
     .botones_chat
     {
-        width: 10vw;
-    }
-    .msg-footer-input
-    {
-    margin-top: 0em;
-    width: fit-content;
-    margin-left: 2em;
-    margin-right: 0em;
-    }
-}
-@media screen and (max-width: 1210px) {
+    transform: scale(1.30);
+        }
+
+    form input{
+ 
+        width: 63vw;
     
+       }
+    nav {
+      position: fixed;
+      display: none;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+      }
     .columna-derecha
     {
-        align-self: center;
+        
+        margin-left: 0px;
+        width: 100vw;
+        height: fit-content;
+        
+        
+      
+        
     }
+    
+
     .msg-container
     {
         width: 83vw;
+        margin:auto;
     }
     .container
     {
-        flex-direction:column-reverse ;
+        flex-direction: column-reverse;
+        position: absolute;
+        overflow: auto;
+        align-items: center;
+
+      
     }
     button
     {
@@ -393,13 +487,7 @@ button:focus,form input:focus
         margin-right: 1em;
         width: fit-content;
     }
-    .botones_chat
-    {
-        width: 10vw;
-        transform: scale(1);
-        margin-left: 1em;
-        margin-right: 2em;
-    }
+    
     .msg-footer-input
     {
     margin-top: 2em;
@@ -422,13 +510,13 @@ button:focus,form input:focus
 
 @media screen and (max-width: 940px) {
 
-    .columna-derecha
+  /*  .columna-derecha
     {
         align-self: center;
         width: 100vw;
 
-    }
-    .msg-container
+    }*/
+    /*.msg-container
     {
         width: 100vw;
     }
@@ -451,7 +539,7 @@ button:focus,form input:focus
     form input
     {
         width: 76vw;
-    }
+    }*/
 }
 @media screen and (max-width: 830px) {
 
