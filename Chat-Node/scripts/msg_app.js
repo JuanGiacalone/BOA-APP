@@ -5,7 +5,7 @@ $(function () {
     var username = $_GET.get('nombre');
     console.log(username);
     // direccion del servidor de node.js 
-    var url = 'localhost:5501';
+    var url = '201.179.215.25:5501';
     //conexion del socket
     var socket = io.connect(url, { transports: ['websocket']});
 
