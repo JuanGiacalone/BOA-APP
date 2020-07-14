@@ -8,6 +8,8 @@ $(function () {
     var url = '201.179.215.25:5501';
     //conexion del socket
     var socket = io.connect(url, { transports: ['websocket']});
+    // agregamos el usuario al socket servidor
+    socket.emit('add user',username);
 
   //variables del dom
 
@@ -31,14 +33,48 @@ $(function () {
       return $('<div/>').text(input).html();
         }
 
-    socket.emit('add user',username);
+    const addMessageElement = (el, options) => {
+      var $el = $(el);
+      
+          // Setup default options
+      if (!options) {
+            options = {}; }
+      
+          // Apply options
+          if (options.fade) {
+            $el.hide().fadeIn(FADE_TIME);
+          }
+          if (options.prepend) {
+            $messages.prepend($el);
+          } else {
+            $messages.append($el);
+          }
+          $messages[0].scrollTop = $messages[0].scrollHeight;
+          
+        }
 
-   /* $('form').submit(function(e){
-      e.preventDefault(); // prevents page reloading
-      console.log(e);
-      sendMessage();
-      return false;
-    });*/
+   const log = (message, options) => {
+          var $el = $('<li>').addClass('log').text(message);
+          addMessageElement($el, options);
+        }
+
+    const addParticipantsMessage = (data) => {
+      var message = '';
+      if (data.numUsers === 1) {
+        message += "Hay 1 conectado";
+      } else {
+        message += "Hay " + data.numUsers + " conectados";
+      }
+      log(message);
+    }
+
+
+    // Whenever the server emits 'login', log the login message
+    socket.on('login', (data) => {
+    connected = true;
+    addParticipantsMessage(data);
+          });
+  
     
    
 
@@ -85,26 +121,7 @@ $(function () {
       addMessageElement($messageDiv, options);
       $msgBodychats[0].scrollTop = $msgBodychats[0].scrollHeight;
     }
-    const addMessageElement = (el, options) => {
-      var $el = $(el);
-  
-      // Setup default options
-      if (!options) {
-        options = {};
-      }
-  
-      // Apply options
-      if (options.fade) {
-        $el.hide().fadeIn(FADE_TIME);
-      }
-      if (options.prepend) {
-        $messages.prepend($el);
-      } else {
-        $messages.append($el);
-      }
-      $messages[0].scrollTop = $messages[0].scrollHeight;
-      
-    }
+
 
   // agrego evento al boton enviar
   $sendButton.addEventListener("click",function(event){event.preventDefault(); sendMessage(); });
@@ -125,27 +142,7 @@ $(function () {
   });
   
     
+  
 
-
-
-  /*
-    const sendMessage = () => {
-      var message = $inputMessage.val();
-      // Prevent markup from being injected into the message
-      message = cleanInput(message);
-      // if there is a non-empty message and a socket connection
-      if (message && connected) {
-        $inputMessage.val('');
-        addChatMessage({
-          username: username,
-          message: message
-        });
-        // tell server to execute 'new message' and send along one parameter
-        socket.emit('new message', message);
-      }
-    }*/
-
-
-    // sanitizante de texto 
-    
+  
 });
