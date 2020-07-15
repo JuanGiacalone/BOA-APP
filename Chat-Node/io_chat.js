@@ -5,6 +5,10 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
+// others vars
+var welcomeMsg = " Bienvenido a Boa ChatApp";
+//
+
 server.listen(5501, () => {
   console.log('listening on *:5501');
         });
@@ -29,6 +33,7 @@ server.listen(5501, () => {
       ++numUsers;
       addedUser = true;
       socket.emit('login', {
+        welcomeMsg:welcomeMsg,
         numUsers: numUsers
       });
       // broadcast a todos los nodos con el numero actual de usuarios y el nombre del nuevo usuario en linea
