@@ -31,6 +31,11 @@ server.listen(5501, () => {
       socket.emit('login', {
         numUsers: numUsers
       });
+      // broadcast a todos los nodos con el numero actual de usuarios y el nombre del nuevo usuario en linea
+      socket.broadcast.emit('user joined', {
+        username: socket.username,
+        numUsers: numUsers
+        });
     });
     socket.on('new message', (msg) => {
       socket.broadcast.emit('new message', {
