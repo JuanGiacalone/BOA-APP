@@ -5,7 +5,7 @@ $(function () {
     var username = $_GET.get('nombre');
     console.log(username);
     // direccion del servidor de node.js 
-    var url = '201.179.215.25:5501';
+    var url = 'localhost:5501';
     //conexion del socket
     var socket = io.connect(url, { transports: ['websocket']});
     // agregamos el usuario al socket servidor
@@ -57,22 +57,33 @@ $(function () {
           var $el = $('<li>').addClass('log').text(message);
           addMessageElement($el, options);
         }
-
+    
     const addParticipantsMessage = (data) => {
+   
       var message = '';
       if (data.numUsers === 1) {
-        message += "Hay 1 conectado";
+        message += "Hay 1 conectado...";
       } else {
-        message += "Hay " + data.numUsers + " conectados";
+        message += "Hay " + data.numUsers + " conectados...";
       }
       log(message);
     }
+
+    const addWelcomeMessage = () => {
+
+      var message  = '';
+      message += "Bienvenido a Boa-Chat-App, "+username;
+      log(message);
+    }
+
 
 
     // Whenever the server emits 'login', log the login message
     socket.on('login', (data) => {
     connected = true;
+    addWelcomeMessage();
     addParticipantsMessage(data);
+    
           });
   
     
