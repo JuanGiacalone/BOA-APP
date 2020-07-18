@@ -40,10 +40,6 @@ $(function () {
       if (!options) {
             options = {}; }
       
-          // Apply options
-          if (options.fade) {
-            $el.hide().fadeIn(FADE_TIME);
-          }
           if (options.prepend) {
             $messages.prepend($el);
           } else {
@@ -89,20 +85,22 @@ $(function () {
     
    
 
-    // Sends a chat message
+    // enviar mensaje
   const sendMessage = () => {
     event.preventDefault();
     var message = $inputMsg.val();
-    // Prevent markup from being injected into the message
+
+    // limpieza del mensaje
     message = cleanInput(message);
-    // if there is a non-empty message and a socket connection
-    if (message) {   //&& connected
+
+    // si existe un mensaje y una conexion...
+    if (message && connected) {   
       $inputMsg.val('');
       addChatMessage({
         username: username,
         message: message
       });
-      // tell server to execute 'new message' and send along one parameter
+      // emit para el servidor, con el parametro mensaje
       socket.emit('new message', message);
     }
   }
@@ -111,11 +109,9 @@ $(function () {
     });
 
 
-     // Keyboard events
-
-     // Adds the visual chat message to the message list
+     // agrega el mensaje a la ui.
     const addChatMessage = (data, options) => {
-      // Don't fade the message in if there is an 'X was typing'
+    
       
   
       var $usernameDiv = $('<span class="username"/>')
@@ -141,11 +137,11 @@ $(function () {
   //agrego evento a la tecla enter y autofocus al input
   $window.keydown(event => {
    
-    // Auto-focus the current input when a key is typed
+    // Foco automatico al inputMsg
     if (!(event.ctrlKey || event.metaKey || event.altKey)) {
       $inputMsg.focus();
     }
-    // When the client hits ENTER on their keyboard
+    // Evento en tecla enter de enviar
     if (event.which === 13) {
       event.preventDefault();
         sendMessage();
@@ -153,7 +149,4 @@ $(function () {
   });
   
     
-  
-
-  
 });
