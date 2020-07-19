@@ -134,7 +134,7 @@ $(function () {
 
      // Cuando se recibe usuario se unió, mostrar nombre en el chat
     socket.on('user joined', (data) => {
-    log(data.username + ' se unió');
+    log(data.username + ' se unión');
     addParticipantsMessage(data);
       });
 
