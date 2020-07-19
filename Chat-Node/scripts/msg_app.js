@@ -49,12 +49,12 @@ $(function () {
           
         }
 
-   const log = (message, options) => {
+  const log = (message, options) => {
           var $el = $('<li>').addClass('log').text(message);
           addMessageElement($el, options);
         }
     
-    const addParticipantsMessage = (data) => {
+  const addParticipantsMessage = (data) => {
    
       var message = '';
       if (data.numUsers === 1) {
@@ -80,13 +80,13 @@ $(function () {
     addWelcomeMessage();
     addParticipantsMessage(data);
     
-          });
+    });
   
     
    
 
     // enviar mensaje
-  const sendMessage = () => {
+    const sendMessage = () => {
     event.preventDefault();
     var message = $inputMsg.val();
 
@@ -104,38 +104,47 @@ $(function () {
       socket.emit('new message', message);
     }
   }
-    socket.on('new message', (data) => {
-      addChatMessage(data);
-    });
-
-
+  
      // agrega el mensaje a la ui.
     const addChatMessage = (data, options) => {
-    
-      
   
       var $usernameDiv = $('<span class="username"/>')
+      
         .text(data.username)
+
         .css('color', 'red');
+
       var $messageBodyDiv = $('<span class="messageBody">')
+
         .text(data.message);
-  
-     
+
       var $messageDiv = $('<li class="message"/>')
+
         .data('username', data.username)
+
         .append($usernameDiv, $messageBodyDiv);
       
       addMessageElement($messageDiv, options);
       $msgBodychats[0].scrollTop = $msgBodychats[0].scrollHeight;
     }
+    // Cuando se recibe un nuevo mensaje se agrega...
+    socket.on('new message', (data) => {
+      addChatMessage(data);
+    });
+
+     // Cuando se recibe usuario se unió, mostrar nombre en el chat
+    socket.on('user joined', (data) => {
+    log(data.username + ' se unió');
+    addParticipantsMessage(data);
+      });
 
 
-  // agrego evento al boton enviar
-  $sendButton.addEventListener("click",function(event){event.preventDefault(); sendMessage(); });
+    // agrego evento al boton enviar
+    $sendButton.addEventListener("click",function(event){event.preventDefault(); sendMessage(); });
 
 
-  //agrego evento a la tecla enter y autofocus al input
-  $window.keydown(event => {
+    //agrego evento a la tecla enter y autofocus al input
+    $window.keydown(event => {
    
     // Foco automatico al inputMsg
     if (!(event.ctrlKey || event.metaKey || event.altKey)) {

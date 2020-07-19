@@ -17,7 +17,7 @@ server.listen(5501, () => {
     
         //contador de usuarios
     var numUsers = 0;
-    var addedUser = false;
+    socket.addedUser = false;
 
     io.on('connection', (socket) => {
    
@@ -38,11 +38,11 @@ server.listen(5501, () => {
       
         console.log(socket.username);
         ++numUsers;
-        addedUser = true;
+        socket.addedUser = true;
         socket.emit('login', {
         numUsers: numUsers
            });
-      // broadcast a todos los nodos con el numero actual de usuarios y el nombre del nuevo usuario en linea
+        // broadcast a todos los nodos con el numero actual de usuarios y el nombre del nuevo usuario en linea
         socket.broadcast.emit('user joined', {
         username: socket.username,
         numUsers: numUsers
