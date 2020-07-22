@@ -1,6 +1,6 @@
 :root {
   --lil-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 1 );
-  --lil-shadow2: 5px 5px 5px 8px rgba(0, 0, 0, 0.15);
+  --lil-shadow2: 2px 2px 2px 2px rgba(0, 0, 0, 0.07);
 }
 * {
   padding: 0;
@@ -17,27 +17,33 @@ body {
   
   /* fondito */
   background: white;
-  display:flex;
+  
+}
+.mi-container
+{
+  align-self: center;
+  height: 60vh;
+  width:100vw;
 }
 .form_envoltorio
 {
   width: 1000px;
   height: 700px;
   margin: auto;
-  border-radius: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5vw;
+  grid-gap: 6vw;
   padding: 5vh 15px;
 }
 
 #logo_izq{
   display: flex;
- 
   justify-content: center;
   align-items: center;
 }
 #logo_izq img{
+  margin-left: 1.5em;
+  text-align: center;
   width: 200px;
   height: 200px;
   transform: scale(1.25);
@@ -45,8 +51,10 @@ body {
 #logo_izq p
 {
   font-family: 'Roboto', sans-serif;
+  text-align: center;
       font-size: 22px;
-      margin-top: 25px;
+      margin-top: 40px;
+      font-weight: bold;
       font-style: italic;
       
 }
@@ -222,35 +230,43 @@ footer{
   font-family: inherit;
   font: bold 16px sans-serif;
   padding: 50px 50px 60px 50px;
-  margin-top: 80px;
   display: inline-block;
   vertical-align: top;
   box-shadow: var(--lil-shadow2);
   background-color: #DC143C;
+  height: 9em;
 }
-.footer_index img {
 
-  float: right;
-  height: 125px;
-  width: 100px;
-  padding: 0.5em;
-  margin-top: 0em;
-  margin-left: -0.5em;
-  background-color: #DC143C;
-
-} 
-.contenedor_footer_izq img
-{
-  width: min-content;
-}
 .creditos
 {
   font-style: italic;
-
+  float: right;
+  width: fit-content;
 }
 .footer_links a
 {
+  display: list-item;
+  color: white;
   text-decoration: none;
+  width: fit-content;
+}
+
+.liston-boa{
+  display: block;
+  width: 100vw;
+  height: fit-content;
+  background-color: #DC143C;
+  text-align: center;
+  box-shadow: var(--lil-shadow2);
+}
+.liston-boa img
+{
+    margin: 0.7em;
+    padding: 0px;
+    align-self: center;
+    width: 85px;
+    height: 85px;
+    background-color: #DC143C;
 }
 
 
