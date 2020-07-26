@@ -11,6 +11,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased
+}
+
 body {
   /* altura maxima para body*/
   height: 100vh;
@@ -99,7 +104,7 @@ body {
 
 }
 #label_nombre:hover{
-    background-color: var(--input_hover);
+  background-color: var(--input_hover);
 }
 .input_nombre{
 
@@ -118,12 +123,13 @@ body {
 }
 .input_nombre::placeholder{
 
-    color: #CBD1DC ;
+  color: #CBD1DC ;
   
 }
-.input_nombre:focus
-{
-outline: none;}
+.input_nombre:focus{
+  outline: none;
+
+}
 
 /* } PARTE NOMBRE*/
 
@@ -141,7 +147,7 @@ outline: none;}
   -ms-user-select: none;
   user-select: none;
 }
-    /*borra el checkbox default*/
+  /*borra el checkbox default*/
 .label_checks input{
   position: absolute;
   opacity: 0;
@@ -201,9 +207,8 @@ a:hover {
 
 /* BANDERAS {*/
 .bandera{
-    width: 100%;
-    height: 100%;
-    
+  width: 100%;
+  height: 100%;
 }
 .bandera:hover
 {
@@ -250,8 +255,7 @@ footer{
   height: 8.5em;
 }
 
-#creditos
-{
+#creditos{
   font-style: normal;
   border-radius: 0.3em;
   padding: 0.5em;
@@ -260,8 +264,7 @@ footer{
   width: fit-content;
 
 }
-.hover-btn a
-{
+.hover-btn a{
 
   color: white;
   text-decoration: none;
@@ -308,47 +311,71 @@ footer{
 }
 
 
-@media (max-height:1000px){
 
+@media screen and (max-width:1000px) {
+
+  /* make the layout  a single column and add some margin to the wrapper */
+
+  .mi-container
+  {
+    justify-items: center;
+    align-items: center;
+  }
+
+  .form_envoltorio {
+    grid-template-columns: none;
+    width:70vw;
+    margin-left: 1em;
+    height: auto;
+    align-self: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;   
+  }
+
+  .input_nombre{
+    margin-bottom: 2em;
+  }
+  .row_banderas{
+    margin-top: 0.5em;
+  }
+
+    /* on small screen we don't display the image */
+  #logo_izq {
+    display: none;
+    }
 }
-  @media screen and (max-width:768px) {
+
+@media screen and (max-height:850px) {
+
+      /* make the layout  a single column and add some margin to the wrapper */
+    
+    .form_envoltorio
+    {
+      height: 50vh;
+     }
+   .form_derecha
+   {
+    height: 55vh;
+      }
+}
+
+@media screen and (max-height:760px) {
 
     /* make the layout  a single column and add some margin to the wrapper */
-
-    .mi-container
-    {
-      justify-items: center;
-      align-items: center;
-    }
-    .form_envoltorio {
-        
-        grid-template-columns: none;
-        width:70vw;
-        margin-left: 1em;
-        height: auto;
-        align-self: center;
-        align-items: center;
-      
-        margin-left: 10px;
-        margin-right: 10px;
-        
-    }
-    .input_nombre
-    {
-      margin-bottom: 2em;
-    }
-    .row_banderas
-    {
-      margin-top: 0.5em;
-    }
-    /* on small screen we don't display the image */
-    #logo_izq {
-        display: none;
-    }
   
+  .form_envoltorio{
+
+    width: 90vw;
+
+    height: 50vh;
+  }
+  .form_derecha{
+
+    height: 55vh;
+
+  }
+
 }
 
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
+
