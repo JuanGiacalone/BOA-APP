@@ -609,6 +609,39 @@ button:focus,form input:focus
     }
 
 }
+@media screen and (max-width: 570px) {
+
+    .msg-body{
+
+        padding: 1em;
+    }
+    .msg-body-chats
+    {
+        width: 73vw;
+        align-self: center;
+        margin-left: 0em;
+        margin-right: 0em;
+        
+    }
+    .msg-container
+    {
+        margin-top: 1em;
+        align-items: center;
+        padding: 5px;
+    }
+
+
+    .botones_chat
+    {
+        transform: scale(1);
+
+    }
+
+    form input
+    {
+        width: auto;
+    }
+}
 
 
    
