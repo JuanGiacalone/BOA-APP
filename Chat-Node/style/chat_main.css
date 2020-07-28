@@ -400,14 +400,29 @@ button:focus,form input:focus
  
     }
  }
- @media screen and (max-width: 1390px) {
-  
-    form input{
- 
-     width: 36vw;
- 
+ @media screen and (max-width: 1450px) {
+
+    .msg-footer-input
+    {
+        margin-left: 0.5em;
     }
+}
+ @media screen and (max-width: 1320px) {
+  button{
+      margin-left: 0.9em;
+  }
  }
+ @media screen and (max-width: 1250px) {
+
+    .msg-footer-input
+    {
+        margin-left: 0.7em;
+    }
+    button{
+        margin-left: 0.8em;
+    }
+}
+
 
 @media screen and (max-width: 1155px) {
 
@@ -450,8 +465,8 @@ button:focus,form input:focus
 
     form input{
  
-        width: 63vw;
-    
+        width: 60vw;
+     
        }
     nav {
       position: fixed;
@@ -492,7 +507,7 @@ button:focus,form input:focus
     button
     {
         margin-left: 0;
-        margin-right: 1em;
+        margin-right: 0.5em;
         width: fit-content;
     }
     
@@ -516,69 +531,47 @@ button:focus,form input:focus
     }
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 950px) {
 
-  /*  .columna-derecha
-    {
-        align-self: center;
-        width: 100vw;
-
-    }*/
-    /*.msg-container
-    {
-        width: 100vw;
-    }
-    .msg-body-chats
-    {
-        width: 91vw;
-    }
-    .botones_chat
-    {
-        width: max-content;
-    }
-    .msg-footer-input
-    {
-    margin-top: 2em;
-    width: fit-content;
-    margin-left: 2em;
-    margin-right: 0em;
-    
-    }
+   
     form input
     {
-        width: 76vw;
-    }*/
+        width: 58vw;
+    }
 }
+
+
+
 @media screen and (max-width: 830px) {
 
    
     form input
     {
-        width: 70vw;
+        width: 54vw;
     }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 750px) {
 
     .msg-body-chats
     {
-        width: 88vw;
+        width: auto;
     }
     
     form input
     {
-        width: 65vw;
+        width: 50vw;
     }
 }
 
 @media screen and (max-width: 570px) {
     .msg-body-chats
     {
-        width: 85vw;
+        width: auto;
     }
     
     form input
     {
-        width: 60vw;
+        width: auto;
     }
 }
 @media screen and (max-width: 500px) {
