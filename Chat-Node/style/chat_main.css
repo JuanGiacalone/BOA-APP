@@ -178,13 +178,15 @@ ul {
  /* body del chat*/
 .msg-body
 {
-    height: 60vh;
+    height: 63vh;
+    padding: 14px;
 }
 .msg-body-chats
 {
     width: 95%;
     height: 59vh;
-    padding: 8px;
+    margin-top: 0.5em;
+    padding: 10px;
     background-color: white;
     margin-left: 2em;
     margin-right: 2.5em;
@@ -380,7 +382,10 @@ button:focus,form input:focus
 .liston-boa{
     display: none;
 }
+.msg-footer{
 
+    height: 12vh;
+}
 
 
 /* RESPONSIVEness */
@@ -568,7 +573,10 @@ button:focus,form input:focus
     {
         width: auto;
     }
-    
+    .msg-container
+    {
+        height: 70vh;
+    }
     form input
     {
         width: auto;
@@ -582,7 +590,7 @@ button:focus,form input:focus
     }
     form
     {
-        height: 20vh;
+        height: auto;
     }
     form input
     {
@@ -592,9 +600,14 @@ button:focus,form input:focus
     {
         margin-left: 0;
     }
+    .msg-body-chats
+    {
+        height: vh;
+    }
     .msg-footer
     {
-        height: 8vh;
+
+        height: 6vh;
     }
     .columna-derecha
     {
