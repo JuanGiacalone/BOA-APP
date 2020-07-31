@@ -568,25 +568,22 @@ button:focus,form input:focus
     }
 }
 
-@media screen and (max-width: 570px) {
-    .msg-body-chats
-    {
-        width: auto;
-    }
-    .msg-container
-    {
-        height: 70vh;
-    }
-    form input
-    {
-        width: auto;
-    }
-}
+
 @media screen and (max-width: 500px) {
 
+
+    .msg-container
+    {
+        height: 72vh;
+    }
+   .messages
+   {
+       margin-top: 0.38em;
+   }
     .msg-body-chats
     {
         width: 80vw;
+        padding: 5px;
     }
     form
     {
@@ -596,18 +593,38 @@ button:focus,form input:focus
     {
         width: 55vw;
     }
+    .msg-container{
+        align-items: center;
+    }
+    .msg-body{
+      
+        height: auto;
+        padding: 10px;
+        padding-bottom: 2px;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+
     .msg-footer-input
     {
+        margin-top: 0em;
         margin-left: 0;
     }
     .msg-body-chats
     {
-        height: vh;
+        width: 99vw;
+        align-self: center;
+        margin: 0px;
+        margin-left: 0px;
     }
     .msg-footer
     {
 
-        height: 6vh;
+        height: 5vh;
+    }
+    form{
+        height: 5vh;
     }
     .columna-derecha
     {
@@ -626,7 +643,7 @@ button:focus,form input:focus
 
     .msg-body{
 
-        padding: 1em;
+        
     }
     .msg-body-chats
     {
