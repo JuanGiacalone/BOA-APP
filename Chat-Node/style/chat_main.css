@@ -379,6 +379,10 @@ button:focus,form input:focus
 .footer{
     display: none;
 }
+#contact_S
+{
+    display: none;
+}
 .liston-boa{
     display: none;
 }
@@ -591,6 +595,12 @@ button:focus,form input:focus
         display: inline-block;
 
     }
+    #contact_L{
+        display: none;
+    }
+    #contact_S{
+    display: inline;
+    }
    .messages
    {
        margin-top: 0.2em;
@@ -652,15 +662,7 @@ button:focus,form input:focus
 }
 @media screen and (max-width: 570px) {
 
-    .msg-body{
-
-        
-    }
-    .msg-body-chats
-    {
-       
-        
-    }
+    
     .msg-container
     {
         margin-top: 1em;
