@@ -11,6 +11,8 @@
  }
 body, html{
     background-image: url(/Chat-Node/style/back-chat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin:0px;
     padding:0px;
     max-width: 100%;
@@ -25,7 +27,7 @@ body {
 /* nav */
 nav
 {
-    height: 14vh;
+    height: 10vh;
     box-shadow: var(--lil-shadow2);
     margin-bottom: 1em;
 }
@@ -33,7 +35,7 @@ nav
     background-color: #DC143C;
     /*	#DC143C*/
     
-    height: 14vh; 
+    height: 20vh; 
     top: 0; 
     width: 100%; 
     transition: top 0.3s; 
@@ -79,7 +81,7 @@ nav
 {
    
     margin-left: 130px;
-    height: 10vh;
+    height: 12.5vh;
     border-radius: 0em  0em  0em 0.4em ;
     margin-bottom: 0.1em;
     background-image: url(/Chat-Node/style/back-chat.jpg);
@@ -116,11 +118,10 @@ nav
 /*msg - container*/
 .msg-container
 {
-    height: 78vh;
+    height: auto;
     background-color: whitesmoke;
     width: 55vw;
-    
-    padding: 15px;
+    padding: 17px;
     margin-top: 20px;
     border-radius: 0.5em;
     box-shadow: var(--lil-shadow);
@@ -284,7 +285,7 @@ button:focus,form input:focus
     margin-left: 1em;
     border-radius: 0.5em;
     box-shadow: var(--lil-shadow);
-    height: 15vh;
+    height: auto;
 }
 .mi-card > h5
 {
@@ -296,7 +297,7 @@ button:focus,form input:focus
 /*Diccionario card*/
 .diccionario
 {
-    height: 45vh;
+    height: auto;
     text-align: center;
 }
 .diccionario iframe
@@ -393,7 +394,10 @@ button:focus,form input:focus
 
     height: 12vh;
 }
-
+.msg-footer button
+{
+    background-color: whitesmoke;
+}
 
 /* RESPONSIVEness */
 @media screen and (max-width: 1700px) {
