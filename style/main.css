@@ -358,72 +358,79 @@ footer{
   }
 }
 
+@media screen and (max-width: 500px) {
 
-
-@media screen and (max-width:1000px) {
-
- 
+  html{
+    width: 100vw;
+  }
+  body{
+    height: 1000px;
+    width: 100vw;
+  }
 
   .mi-container
   {
-    justify-items: center;
-    align-items: center;
-  }
-
-  .form_envoltorio {
-    grid-template-columns: none;
-    width:70vw;
-    margin-left: 1em;
-    height: auto;
-    align-self: center;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;   
-  }
-
-  .input_nombre{
-    margin-bottom: 2em;
-  }
-  .row_banderas{
-    margin-top: 0.5em;
-  }
-
-    /* on small screen we don't display the image */
-  #logo_izq {
-    display: none;
-    }
-}
-
-@media screen and (max-height:850px) {
-
-      /* make the layout  a single column and add some margin to the wrapper */
+    overflow: show;
     
-    .form_envoltorio
-    {
-      height: 50vh;
-     }
-   .form_derecha
-   {
-    height: 55vh;
-      }
-}
+  }
+  .liston-boa
+  {
+    height: 12vh;
+  }
+  .liston-boa img
+  {
+    transform: scale(0.7);
+    margin-top: 0px;
+    
+  }
+  .logo_izq
+  {
+    display: none;
+  }
+  .form_envoltorio
+  {
+    margin: 10vw;
+    margin-top: 0vw;
+    height: fit-content;
+  }
+  .form_derecha
+  {
+    font-size: small;
+    padding: 20px;
+  }
+  #opcion_ingles
+  {
+    margin: 0px;
+  }
 
-@media screen and (max-height:760px) {
+  .footer_index
+  {
+    padding: 10px;
+    height: 60vh;
+    position: relative;
+  }
 
-    /* make the layout  a single column and add some margin to the wrapper */
+  .hover-btn
+  {
+    width: 80vw;
+    margin: 1em;
+  }
+  #creditos
+  {
+    width: 80vw;
+    margin: 1em;
+    float: left;
+    color: black;
+    font-style: italic;
+  }
+ 
   
-  .form_envoltorio{
-
-    width: 90vw;
-
-    height: 50vh;
-  }
-  .form_derecha{
-
-    height: 55vh;
-
-  }
 
 }
+
+
+
+
+
 
 /*--- RESPONSIVENESS ---*/
