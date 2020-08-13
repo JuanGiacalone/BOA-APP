@@ -35,10 +35,11 @@ nav
     background-color: #DC143C;
     /*	#DC143C*/
     
-    height: 20vh; 
+    height: 15vh; 
     top: 0; 
     width: 100%; 
     transition: top 0.3s; 
+   
   }
   
 .navbar a {
@@ -81,7 +82,7 @@ nav
 {
    
     margin-left: 130px;
-    height: 12.5vh;
+    height: 10vh;
     border-radius: 0em  0em  0em 0.4em ;
     margin-bottom: 0.1em;
     background-image: url(/Chat-Node/style/back-chat.jpg);
@@ -112,8 +113,10 @@ nav
 .columna-derecha
 {
     flex: 3.5;
-    width: 68vw;
+    width: auto;
+    height: auto;
     margin-left: 3em;
+    margin-top: 2em;
 }
 
 /*msg - container*/
@@ -401,7 +404,7 @@ button:focus,form input:focus
 }
 
 /* RESPONSIVEness */
-@media screen and (min-height: 657px) {
+@media screen and (max-height: 657px) {
 
     .navbar
     {
@@ -559,7 +562,7 @@ button:focus,form input:focus
         position: absolute;
         overflow: auto;
         align-items: center;
-
+        
       
     }
     button
