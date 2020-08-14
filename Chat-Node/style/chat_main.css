@@ -86,7 +86,8 @@ nav
     border-radius: 0em  0em  0em 0.4em ;
     margin-bottom: 0.1em;
     background-image: url(/Chat-Node/style/back-chat.jpg);
-    background-size:cover ;
+    background-size:cover;
+   
 }
 
 
@@ -125,7 +126,8 @@ nav
     height: auto;
     background-color: whitesmoke;
     width: 55vw;
-    padding: 17px;
+    height: auto;
+    padding: 8px;
     margin-top: 20px;
     border-radius: 0.5em;
     box-shadow: var(--lil-shadow);
@@ -187,19 +189,18 @@ ul {
 .msg-body
 {
     height: 63vh;
-    padding: 14px;
+    padding: 15px;
+    padding-top: 5px;
 }
 .msg-body-chats
 {
-    width: 95%;
-    height: 59vh;
+    width: auto;
+    height: auto;
     margin-top: 0.5em;
     padding: 10px;
     background-color: white;
-    margin-left: 2em;
-    margin-right: 2.5em;
     scroll-behavior: smooth;
-    border-radius: 2em;
+    border-radius: 0.5em;
     box-shadow: var(--lil-shadow);
     overflow-y: auto;
     
@@ -208,10 +209,9 @@ ul {
 /* footer del chat*/ 
 form { 
     
-    border-radius: 2em; 
-    padding: 4px; 
-    bottom: 0; 
-    width: 100%; }
+    display: inline;
+    box-sizing: border-box;
+     }
 
 form input { 
     border: 1px grey;
@@ -232,10 +232,7 @@ span
     overflow: hidden;
     padding: 1em;
 }
-.msg-footer
-{
-    height: 11vh;  
-}
+
 button
 {
     text-decoration: none;
@@ -396,7 +393,8 @@ button:focus,form input:focus
 }
 .msg-footer{
 
-    height: 12vh;
+    height: 8vh;
+    margin-top: -2em;
 }
 .msg-footer button
 {
