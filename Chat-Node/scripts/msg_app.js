@@ -4,7 +4,7 @@ $(function () {
     // se obtiene de la variable usuario de la ruta 
     window.$_GET = new URLSearchParams(location.search);
     var username = $_GET.get('nombre');
-    console.log(username);
+    
     // direccion del servidor de node.js 
     var url = 'localhost:5501';
     //conexion del socket
@@ -37,7 +37,7 @@ $(function () {
     const addMessageElement = (el, options) => {
       var $el = $(el);
       
-          // Setup default options
+          // Configuracion de opciones (sinuso)
       if (!options) {
             options = {}; }
       
@@ -50,11 +50,12 @@ $(function () {
           
         }
 
+        // agrega log al body chat
     const log = (message, options) => {
           var $el = $('<li>').addClass('log').text(message);
           addMessageElement($el, options);
         }
-    
+        // agrega mensaje de nuevo participante con formato log
     const addParticipantsMessage = (data) => {
    
       var message = '';
@@ -65,7 +66,7 @@ $(function () {
       }
       log(message);
     }
-
+    //  agrega el mensaje de bienvenida 
     const addWelcomeMessage = () => {
 
       var message  = '';
@@ -75,7 +76,7 @@ $(function () {
 
 
 
-    // Whenever the server emits 'login', log the login message
+    // cuando el servidor emite la orden login, se logean el mensaje de bienvenida y del propio usuario
     socket.on('login', (data) => {
     connected = true;
     addWelcomeMessage();
