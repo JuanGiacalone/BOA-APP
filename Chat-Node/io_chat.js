@@ -1,13 +1,13 @@
 //    !!requires!!
 const express = require('express'),
-    https = require('https');
+    http = require('http');
 var path = require('path');
 //    !!requires!!
 
 // Configuracion general
 const puerto = 5501;
 const app = express();
-const server = https.createServer(app);
+const server = http.createServer(app);
 
 // config del socket
 const io = require('socket.io').listen(server);

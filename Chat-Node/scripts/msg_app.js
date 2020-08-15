@@ -1,17 +1,18 @@
 $(function () {
- 
+   
+
     // se obtiene de la variable usuario de la ruta 
     window.$_GET = new URLSearchParams(location.search);
     var username = $_GET.get('nombre');
     console.log(username);
     // direccion del servidor de node.js 
-    var url = 'boa-appapi.ddns.net:5501';
+    var url = 'localhost:5501';
     //conexion del socket
     var socket = io.connect(url, { transports: ['websocket']});
     // agregamos el usuario al socket servidor
     socket.emit('add user',username);
 
-  //variables del dom
+    //variables del dom
 
     // ul de mensajes
     var $messages = $('.messages');
@@ -49,12 +50,12 @@ $(function () {
           
         }
 
-  const log = (message, options) => {
+    const log = (message, options) => {
           var $el = $('<li>').addClass('log').text(message);
           addMessageElement($el, options);
         }
     
-  const addParticipantsMessage = (data) => {
+    const addParticipantsMessage = (data) => {
    
       var message = '';
       if (data.numUsers === 1) {
@@ -102,7 +103,7 @@ $(function () {
       });
       // emit para el servidor, con el parametro mensaje
       socket.emit('new message', message);
-    }
+      }
   }
   
      // agrega el mensaje a la ui.
@@ -159,7 +160,32 @@ $(function () {
       event.preventDefault();
         sendMessage();
     }
+
+     
   });
-  
-    
+
+
 });
+
+//MODAL
+
+  // Obtiene el modal
+  var modal = document.getElementById("miModal");
+
+// OnClick modal501() muestra el modal
+function modal501(){
+ 
+  modal.style.display = "block";
+
+  // Cerrar cuando el usuario clickea afuera del modal
+  window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    }
+  }
+  }
+//MODAL
+
+
+
+

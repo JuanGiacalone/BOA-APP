@@ -86,7 +86,8 @@ nav
     border-radius: 0em  0em  0em 0.4em ;
     margin-bottom: 0.1em;
     background-image: url(/Chat-Node/style/back-chat.jpg);
-    background-size:cover;
+    
+    background-size: 2000px;
    
 }
 
@@ -141,7 +142,7 @@ nav
 .log{
     
     text-align: center;
-    background-color: whitesmoke;
+    background-color: white;
     font-style: italic;
     font-weight: bold;
 }
@@ -153,7 +154,8 @@ ul {
     margin: 0; 
     padding: 10px;
     border-radius: 1.8em;
-   min-height: 57vh;
+   height: 57vh;
+   scroll-behavior: smooth;
  }
 
 .messages li { 
@@ -286,8 +288,11 @@ button:focus,form input:focus
     margin-left: 1em;
     border-radius: 0.5em;
     box-shadow: var(--lil-shadow);
+    align-items: center;
+    text-align: center;
     height: auto;
 }
+
 .mi-card > h5
 {
     background-color: white;
@@ -336,25 +341,26 @@ button:focus,form input:focus
     padding: 10px;
     font-size: 30px;
     
-    width: fit-content;
+    width: max-content;
     margin-left: 0.5em;
     text-align: center;
     text-decoration: none;
   }
   
-  /* Add a hover effect if you want */
+ 
   .login .fa:hover {
       
     opacity: 0.7;
   }
   
-  /* Set a specific color for each brand */
+
   
   /* Facebook */
   .fa-facebook {
     background: #3B5998;
     padding: 15px;
     color: white;
+    
   }
   
   /* Twitter */
@@ -400,6 +406,47 @@ button:focus,form input:focus
 {
     background-color: whitesmoke;
 }
+
+/*MODAL*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: fit-content;
+  }
+  
+  /* The Close Button */
+  .close {
+      display: none;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /* RESPONSIVEness */
 @media screen and (max-height: 657px) {

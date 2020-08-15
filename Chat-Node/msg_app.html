@@ -25,9 +25,9 @@
       <img src="/style/logo_boa_black.png" alt="BoaApp" srcset="">
       <div class="navbar-buttons">
         <a href="#home"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
-      <a href="#news"><i class="fa fa-quote-right fa-2x" aria-hidden="true"></i></a>
-      <a href="#help"><i class="fa fa-question fa-2x" aria-hidden="true"></i></a>
-      <a href="#share"><i class="fa fa-share-alt fa-2x"></i></a>
+      <a onclick="modal501()" type="button"><i class="fa fa-quote-right fa-2x" aria-hidden="true"></i></a>
+      <a onclick="modal501()" type="button"><i class="fa fa-question fa-2x" aria-hidden="true"></i></a>
+      <a onclick="modal501()" type="button"><i class="fa fa-share-alt fa-2x"></i></a>
       </div>
       
       
@@ -43,9 +43,9 @@
           <img src="/style/logo_boa_black.png" alt="BoaApp" srcset="">
           <div class="navbar-buttons">
             <a href="#home">Inicio</a>
-          <a href="#news">Foro</a>
-          <a href="#contact" id="contact_L">Sobre el sitio</a>
-          <a href="#contact" id="contact_S">+</a>
+          <a onclick="modal501()" type="button">Foro</a>
+          <a onclick="modal501()" type="button" id="contact_L">Sobre el sitio</a>
+          <a onclick="modal501()" type="button" id="contact_S">+</a>
           </div>
         </div>
       </div>
@@ -55,10 +55,10 @@
         <div class="columna-izquierda-container">
           <div class="mi-card login">
             <h5>Ingresá con tu red social !</h5>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-google"></a>
-            <a href="#" class="fa fa-linkedin"></a>
+            <a onclick="modal501()" type="button" class="fa fa-facebook"></a>
+            <a onclick="modal501()"  type="button" class="fa fa-twitter"></a>
+            <a onclick="modal501()"  type="button" class="fa fa-google"></a>
+            <a onclick="modal501()"  type="button" class="fa fa-linkedin"></a>
           </div>
           <div class="mi-card diccionario">
             <h5>Ayudate con WordReference !</h5>
@@ -92,7 +92,7 @@
            
               <div class="botones_chat">
 
-              <label for="send enviar audio"><button title= "Grabar Audio"> <i class="fa fa-microphone" style="font-size: 36px; color:red;"></i></button></label>
+              <label for="send enviar audio"><button title= "Grabar Audio" onclick="modal501()" type="button"> <i class="fa fa-microphone" style="font-size: 36px; color:red;"></i></button></label>
 
               <label for="send enviar"> <button title= "Enviar mensaje" type="submit" id="sendButton" > <i class="fa fa-paper-plane fa-3x" aria-hidden="true"> </i></button></label>
 
@@ -110,10 +110,22 @@
       
         
     </div>
-  </body>
+    <div id="miModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="https://http.cat/501" alt="Not Implemented">
+        <p style="font-weight: bold; font-size: large; text-align: center; margin: 1em;">Haz click afuera del modal para cerrar...</p>
+      </div>
+    
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/Chat-Node/node_modules/socket.io-client/dist/socket.io.js"></script>
     <script src="/Chat-Node/scripts/msg_app.js"></script>
+  </body>
+    
 
   
 </html>
